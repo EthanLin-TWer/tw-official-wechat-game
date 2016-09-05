@@ -4,6 +4,12 @@ import './App.css';
 
 class App extends Component {
 
+   componentWillMount() {
+      this.props = {
+         data: Questions
+      }
+   }
+
    render() {
       console.info(this.props)
       return (
@@ -13,20 +19,16 @@ class App extends Component {
                <div className="question-image">{ this.props.data[0].images }</div>
                <div className="options">
                   {
-                     this.props.data[0].options.map(option => {
+                     this.props.data[0].options.map((option, index) => {
                         return <div className="option">{option}</div>
                      })
                   }
                </div>
-               
+
             </div>
          </div>
       )
    }
 }
-App.defaultProps = {
-   data: Questions
-}
-
 
 export default App;
