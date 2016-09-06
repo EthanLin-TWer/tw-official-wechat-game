@@ -30,23 +30,33 @@ class App extends Component {
    }
 
    handleNext(question) {
-      let nextIndex = question.index + 1
-      this.setState(previousState => {
-         previousState.data[question.index] = question
-         previousState.current = {
-            index: nextIndex,
-            question: previousState.data[nextIndex]
-         }
-      })
+
+      if (question.index < this.state.total - 1) {
+         let nextIndex = question.index + 1
+         this.setState(previousState => {
+            previousState.data[question.index] = question
+            previousState.current = {
+               index: nextIndex,
+               question: previousState.data[nextIndex]
+            }
+         })
+      } else {
+         console.log('current index is ' + question.index + ' which indicates it is the last' +
+            ' question, no state reset happens')
+      }
    }
 
    handlePrevious(currentIndex) {
-      this.setState(previousState => {
-         previousState.current = {
-            index: currentIndex - 1,
-            question: previousState.data[(currentIndex - 1)]
-         }
-      })
+      if (currentIndex > 0) {
+         this.setState(previousState => {
+            previousState.current = {
+               index: currentIndex - 1,
+               question: previousState.data[(currentIndex - 1)]
+            }
+         })
+      } else {
+         console.log('current index is 0 which indicates it is the first question, no state reset happens')
+      }
    }
 }
 
