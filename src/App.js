@@ -30,7 +30,10 @@ class App extends Component {
    }
 
    handleNext(question) {
-
+      if (!question.answer) {
+         console.log('question not answered yet, cannot proceed')
+         return ;
+      }
       if (question.index < this.state.total - 1) {
          let nextIndex = question.index + 1
          this.setState(previousState => {
