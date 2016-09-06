@@ -4,8 +4,9 @@ import Questions from './data.json'
 import './App.css';
 
 class App extends Component {
-   componentWillMount() {
-      this.props = {
+   constructor(props) {
+      super(props)
+      this.state = {
          data: Questions.map((question, index) => {
             question.index = index
             question.answer = ''
@@ -14,20 +15,28 @@ class App extends Component {
          current: {
             index: 0,
             question: Questions[0]
-         }
+         },
+         total: Questions.length
       }
    }
 
    render() {
       return (
          <div className="App">
-            <Question question={this.props.current.question} onNext={this.handleNext.bind(this)}></Question>
+            <Question question={this.state.current.question} onNext={this.handleNext.bind(this)}></Question>
          </div>
       )
    }
 
    handleNext(question) {
-      console.log(question)
+      let nextIndex = question.index + 1
+      this.setState(previousState => {
+         previousState.data[question.index] = question
+         previousState.current = {
+            index: nextIndex,
+            question: previousState.data[nextIndex]
+         }
+      })
    }
 
    handlePrevious(question) {
