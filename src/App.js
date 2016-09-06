@@ -24,16 +24,17 @@ class App extends Component {
       return (
          <div className="App">
             <Question question={this.state.current.question}
-                      onNext={this.handleNext.bind(this)} onPrevious={this.handlePrevious.bind(this)}></Question>
+                      onNext={this.handleNext.bind(this)}
+                      onPrevious={this.handlePrevious.bind(this)}></Question>
          </div>
       )
    }
 
    handleNext(question) {
-      if (!question.answer) {
-         console.log('question not answered yet, cannot proceed')
-         return ;
-      }
+      // if (!question.answer) {
+      //    console.log('question not answered yet, cannot proceed')
+      //    return ;
+      // }
       if (question.index < this.state.total - 1) {
          let nextIndex = question.index + 1
          this.setState(previousState => {

@@ -3,8 +3,6 @@ import React, { Component } from 'react'
 class Question extends Component {
 
    onNext() {
-      console.log('current question: ')
-      console.log(this.props.question)
       this.props.onNext(this.props.question)
    }
 
