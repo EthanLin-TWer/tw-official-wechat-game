@@ -8,6 +8,10 @@ class Question extends Component {
       this.props.onNext(this.props.question)
    }
 
+   onPrevious() {
+      this.props.onPrevious(this.props.question.index)
+   }
+
    onSelect(event) {
       this.props.question.answer = event.target.value
    }
@@ -31,7 +35,7 @@ class Question extends Component {
                })
             }</div>
             <div className="question-navigation">
-               <button type="button" className="previous-question-button">上一题</button>
+               <button type="button" className="previous-question-button" onClick={this.onPrevious.bind(this)}>上一题</button>
                <button type="button" className="next-question-button" onClick={this.onNext.bind(this)}>下一题</button>
             </div>
          </div>

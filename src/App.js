@@ -23,7 +23,8 @@ class App extends Component {
    render() {
       return (
          <div className="App">
-            <Question question={this.state.current.question} onNext={this.handleNext.bind(this)}></Question>
+            <Question question={this.state.current.question}
+                      onNext={this.handleNext.bind(this)} onPrevious={this.handlePrevious.bind(this)}></Question>
          </div>
       )
    }
@@ -39,8 +40,13 @@ class App extends Component {
       })
    }
 
-   handlePrevious(question) {
-
+   handlePrevious(currentIndex) {
+      this.setState(previousState => {
+         previousState.current = {
+            index: currentIndex - 1,
+            question: previousState.data[(currentIndex - 1)]
+         }
+      })
    }
 }
 
