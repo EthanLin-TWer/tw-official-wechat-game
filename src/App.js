@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Question from './pages/Question'
+import { QuestionNavigation } from './components'
+
 import Data from './data.json'
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -7,6 +9,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 class App extends Component {
    constructor(props) {
       super(props)
+      this.handleNext = this.handleNext.bind(this)
+      this.handlePrevious = this.handlePrevious.bind(this)
       this.state = {
          questions: Data.map((question, index) => ({ ...question, index, answer: '' })),
          indexCurrent: 0
@@ -14,11 +18,14 @@ class App extends Component {
    }
 
    render() {
+      const { questions, indexCurrent } = this.state
       return (
          <div className="App">
-            <Question question={this.state.questions[this.state.indexCurrent]}
-                      onNext={this.handleNext.bind(this)}
-                      onPrevious={this.handlePrevious.bind(this)}></Question>
+            <Question question={questions[indexCurrent]}/>
+            <QuestionNavigation
+               onNext={this.handleNext}
+               onPrevious={this.handlePrevious}
+               question={questions[indexCurrent]}/>
          </div>
       )
    }
@@ -28,10 +35,11 @@ class App extends Component {
       //    console.log('question not answered yet, cannot proceed')
       //    return ;
       // }
-      if (question.index < this.state.questions.length - 1) {
-         this.setState(previousState => {
-            previousState.questions[question.index] = question
-            previousState.indexCurrent = question.index + 1
+      const { questions } = this.state
+
+      if (question.index < questions.length - 1) {
+         this.setState({
+            indexCurrent: question.index + 1
          })
       } else {
          console.log('current index is ' + question.index + ' which indicates it is the last' +
@@ -41,14 +49,13 @@ class App extends Component {
 
    handlePrevious(question) {
       if (question.index > 0) {
-         this.setState(previousState => {
-            previousState.indexCurrent = question.index - 1
+         this.setState({
+            indexCurrent: question.index - 1
          })
       } else {
          console.log('current index is 0 which indicates it is the first question, no state reset happens')
       }
    }
-
 }
 
-export default App;
+export default App

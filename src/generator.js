@@ -1,5 +1,6 @@
 const fs = require('fs')
 const data = []
+
 for (let i = 1; i <= 20; i++) {
 	let options = ['a', 'b', 'c', 'd']
 	data.push({
