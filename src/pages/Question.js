@@ -7,7 +7,7 @@ class Question extends Component {
    }
 
    onPrevious() {
-      this.props.onPrevious(this.props.question.index)
+      this.props.onPrevious(this.props.question)
    }
 
    onSelect(event) {
@@ -25,16 +25,16 @@ class Question extends Component {
                this.props.question.options.map((option, index) => {
                   return (
                      <div className="option" key={index}>
-                        <label htmlFor={ `option${index}` }>{option}</label>
                         <input id={ `option${index}` } type="radio" value={option} name="option"
-                               onChange={this.onSelect.bind(this)}/>
+                               onChange={this.onSelect.bind(this)} />
+                        <label htmlFor={ `option${index}` }>{option}</label>
                      </div>
                   )
                })
             }</div>
             <div className="question-navigation">
-               <button type="button" className="previous-question-button" onClick={this.onPrevious.bind(this)}>上一题</button>
-               <button type="button" className="next-question-button" onClick={this.onNext.bind(this)}>下一题</button>
+               <button type="button" className="previous-question-button btn btn-cancel btn-lg" onClick={this.onPrevious.bind(this)}>上一题</button>
+               <button type="button" className="next-question-button btn btn-primary btn-lg" onClick={this.onNext.bind(this)}>下一题</button>
             </div>
          </div>
       )

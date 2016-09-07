@@ -5,7 +5,7 @@ for (let i = 1; i <= 20; i++) {
 	data.push({
 		id: i,
 		question: 'question-' + i.toString().repeat(8),
-		options: options.map(option => 'question-' + option.repeat(5)),
+		options: options.map(option => 'question-' + option.repeat(5) + '-' + i),
 		images: ['./src/images/img' + i.toString().repeat(8) + '.jpg']
 	})
 }

@@ -11,30 +11,48 @@ body {
 }
 
 .question-panel {
-
+    padding: 10px;
 }
 
 .question {
     margin: 15px;
-    padding: 10px;
-    background: #2f6fad;
+    font-weight: bold;
+    text-align: left;
 }
 
-.options {
-    border: 1px solid #ccc;
-}
+.options { }
 
 .option {
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
     background: #3d9970;
     border-radius: 5px;
+    text-align: left;
 }
 
 .previous-question-button {
-
+    float: left;
 }
 
 .next-question-button {
+    float: right;
+}
 
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    margin: 0 !important;
+}
+.option input:checked + label:before {
+    border: 1px solid #adb8c0;
+    font-size: 18px;
+    content: '\2714';
+}
+
+.option input:not(:checked) + label:before {
+    border: 1px solid #adb8c0;
+    padding: 3px 10px;
+    content: '';
 }
