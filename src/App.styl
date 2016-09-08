@@ -35,15 +35,17 @@ input[type="radio"]
 label 
   margin: 0 !important
 
-  
+
+border-style = 1px solid #adb8c0
+
 .option input:checked + label:before 
-  border: 1px solid #adb8c0
+  border: border-style
   font-size: 18px
   content: '\2714'
 
 
 .option input:not(:checked) + label:before 
-  border: 1px solid #adb8c0
+  border: border-style
   padding: 3px 10px
   content: ''
 
