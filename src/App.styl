@@ -2,12 +2,36 @@ html
   margin: 0
   padding: 0
 
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+@-webkit-keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+@-ms-keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+@-moz-keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+
 
 body
   margin: 0 auto !important
   max-width: 800px
   background: #000
+  background-image: url('./images/bg-clouds.png');
+  background-position: 0px 0px;
+  background-size: cover
 
+  animation: animatedBackground 60s linear infinite;
+  -ms-animation: animatedBackground 60s linear infinite;
+  -moz-animation: animatedBackground 60s linear infinite;
+  -webkit-animation: animatedBackground 60s linear infinite;
 
 .question-panel 
   padding: 1em
@@ -23,9 +47,11 @@ body
 .option 
   margin: 1em 0
   padding: 10px
-  background: #3d9970
-  border-radius: 5px
+  //background: #3d9970
+  //border-radius: 5px
   text-align: left
+  display: block
+  //border-bottom: 1px solid #ddd
 
 
 input[type="radio"] 
@@ -38,24 +64,36 @@ label
 
 border-style = 1px solid #adb8c0
 
-.option input:checked + label:before 
-  border: border-style
+.option
+  //border: border-style
+
+
+.option i:before
+  display: inline-block
+  position: absolute
+  //top: 50%
+  height: 20px
+  width: 20px
+
+.option-text
+  margin-left: 25px
+  display: block
+
+.option input:checked + i:before
   font-size: 18px
   content: '\2714'
+  color: #05f1b2
 
 
-.option input:not(:checked) + label:before 
-  border: border-style
-  padding: 3px 10px
-  content: ''
+.option input:not(:checked) + i:before
+  border: 1px solid #999;
+  border-radius: 50%
+  content: ' '
 
 
 // header
 .app-header
   width: 100%
-  height: 80px
-  background: url('./images/header/never-stop-learning-portrait.jpg') 100% 30% no-repeat
-  background-size: 100%
 
 
 // navigation
