@@ -1,16 +1,11 @@
 [
   {
     "id": 1,
-    "question": "question-11111111",
+    "question": "秦始皇吞并六国采用了以下哪种算法思想？",
     "options": [
-      "question-aaaaa-1",
-      "question-bbbbb-1",
-      "question-ccccc-1",
-      "question-ddddd-1"
+      "递归", "分治", "迭代", "模拟"
     ],
-    "rightAnswer": 1,
     "images": [
-      "./src/images/img11111111.jpg"
     ]
   },
   {

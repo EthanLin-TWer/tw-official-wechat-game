@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Question from './pages/Question'
-import { QuestionNavigation } from './components'
+import { QuestionNavigation, Header, Footer } from './components'
 
 import Data from './data.json'
 import './App.css';
@@ -21,20 +21,22 @@ class App extends Component {
       const { questions, indexCurrent } = this.state
       return (
          <div className="App">
+            <Header />
             <Question question={questions[indexCurrent]}/>
-            <QuestionNavigation
+            <QuestionNavigation question={questions[indexCurrent]}
                onNext={this.handleNext}
                onPrevious={this.handlePrevious}
-               question={questions[indexCurrent]}/>
+            />
+            <Footer />
          </div>
       )
    }
 
    handleNext(question) {
-      // if (!question.answer) {
-      //    console.log('question not answered yet, cannot proceed')
-      //    return ;
-      // }
+      if (!question.answer) {
+         console.log('question not answered yet, cannot proceed')
+         return ;
+      }
       const { questions } = this.state
 
       if (question.index < questions.length - 1) {
@@ -47,6 +49,10 @@ class App extends Component {
       }
    }
 
+   shouldComponentUpdate() {
+      console.log('component should update')
+      return true
+   }
    handlePrevious(question) {
       if (question.index > 0) {
          this.setState({
