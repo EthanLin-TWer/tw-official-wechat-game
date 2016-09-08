@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Question } from './pages'
-import { QuestionNavigation, Header, Footer } from './components'
+import { Navigation, Header, Footer } from './components'
 
 import Data from './data/questions.json'
 import './App.styl'
@@ -25,7 +25,7 @@ class App extends Component {
          <div className="App">
             <Header />
             <Question question={questions[indexCurrent]}/>
-            <QuestionNavigation question={questions[indexCurrent]}
+            <Navigation question={questions[indexCurrent]}
                onNext={this.handleNext} onPrevious={this.handlePrevious}
                showSubmit={this.showSubmit} showPrevious={this.showPrevious}
             />
