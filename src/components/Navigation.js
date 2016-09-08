@@ -11,27 +11,27 @@ class Navigation extends Component {
       const { index, total } = this.props
       return (
          <ul className="pager">
-            { this.showPrevious(index) ? this.renderPrevious() : null }
-            { this.showSubmit(index, total) ? this.renderNext('提交') : this.renderNext('下一题') }
+            { this.showPrevious(index) ? this.renderPrevious(index) : null }
+            { this.showSubmit(index, total) ? this.renderNext('提交')(index) : this.renderNext('下一题')(index) }
          </ul>
       )
    }
 
-   renderPrevious() {
-      const { onPrevious, question } = this.props
+   renderPrevious(index) {
+      const { onPrevious } = this.props
       return (
          <li className="previous"><a
-            onClick={() => onPrevious(question)}><span aria-hidden="true">&larr;</span>上一题
+            onClick={() => onPrevious(index)}><span aria-hidden="true">&larr;</span>上一题
          </a></li>
       )
    }
 
    renderNext(text) {
-      const { onNext, question }  = this.props
-      return (
+      const { onNext } = this.props
+      return index => (
          <li className="next">
             <a
-               onClick={() => onNext(question)}>{text}<span aria-hidden="true">&rarr;</span>
+               onClick={() => onNext(index)}>{text}<span aria-hidden="true">&rarr;</span>
             </a>
          </li>
       )

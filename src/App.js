@@ -23,35 +23,35 @@ class App extends Component {
          <div className="App">
             <Header />
             <Question question={questions[indexCurrent]}/>
-            <Navigation question={questions[indexCurrent]} index={this.state.indexCurrent} total={this.state.questions.length}
+            <Navigation index={this.state.indexCurrent} total={this.state.questions.length}
                onNext={this.handleNext} onPrevious={this.handlePrevious}
             />
             <Footer />
          </div>
       )
    }
-   
-   handleNext(question) {
-      // if (!question.answer) {
-      //    console.log('question not answered yet, cannot proceed')
-      //    return ;
-      // }
-      const { questions } = this.state
 
-      if (question.index < questions.length - 1) {
+   handleNext(current) {
+      const { questions } = this.state
+      if (!questions[current].answer) {
+         console.log('question not answered yet, cannot proceed')
+         return ;
+      }
+
+      if (current < questions.length - 1) {
          this.setState({
-            indexCurrent: question.index + 1
+            indexCurrent: current + 1
          })
       } else {
-         console.log('current index is ' + question.index + ' which indicates it is the last' +
+         console.log('current index is ' + current + ' which indicates it is the last' +
             ' question, no state reset happens')
       }
    }
 
-   handlePrevious(question) {
-      if (question.index > 0) {
+   handlePrevious(current) {
+      if (current > 0) {
          this.setState({
-            indexCurrent: question.index - 1
+            indexCurrent: current - 1
          })
       } else {
          console.log('current index is 0 which indicates it is the first question, no state reset happens')
