@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Question from './pages/Question'
+import { Question } from './pages'
 import { QuestionNavigation, Header, Footer } from './components'
 
-import Data from './data.json'
+import Data from './data/questions.json'
 import './App.styl'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 

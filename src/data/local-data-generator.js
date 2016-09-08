@@ -10,4 +10,4 @@ for (let i = 1; i <= 20; i++) {
 		images: ['./src/images/img' + i.toString().repeat(8) + '.jpg']
 	})
 }
-fs.writeFile('./data.json', JSON.stringify(data, null, '  '))
+fs.writeFile('./questions.json', JSON.stringify(data, null, '  '))
