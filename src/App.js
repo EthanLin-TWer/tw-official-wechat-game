@@ -3,7 +3,7 @@ import Question from './pages/Question'
 import { QuestionNavigation, Header, Footer } from './components'
 
 import Data from './data.json'
-import './App.css';
+import './App.styl'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component {

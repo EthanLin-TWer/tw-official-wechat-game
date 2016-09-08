@@ -15,6 +15,7 @@ class Question extends Component {
       const { question } = this.props
       console.log('child rendering')
       return (
+         
          <div className="question-panel">
             <div className="question">{ question.question }</div>
             <div className="question-image">{ question.images }</div>
