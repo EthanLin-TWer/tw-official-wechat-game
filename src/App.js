@@ -11,6 +11,8 @@ class App extends Component {
       super(props)
       this.handleNext = this.handleNext.bind(this)
       this.handlePrevious = this.handlePrevious.bind(this)
+      this.showSubmit = this.showSubmit.bind(this)
+      this.showPrevious = this.showPrevious.bind(this)
       this.state = {
          questions: Data.map((question, index) => ({ ...question, index, answer: '' })),
          indexCurrent: 0
@@ -24,19 +26,28 @@ class App extends Component {
             <Header />
             <Question question={questions[indexCurrent]}/>
             <QuestionNavigation question={questions[indexCurrent]}
-               onNext={this.handleNext}
-               onPrevious={this.handlePrevious}
+               onNext={this.handleNext} onPrevious={this.handlePrevious}
+               showSubmit={this.showSubmit} showPrevious={this.showPrevious}
             />
             <Footer />
          </div>
       )
    }
 
+   showSubmit() {
+      const { indexCurrent, questions } = this.state
+      return indexCurrent === questions.length - 1
+   }
+
+   showPrevious() {
+      return this.state.indexCurrent > 0
+   }
+
    handleNext(question) {
-      if (!question.answer) {
-         console.log('question not answered yet, cannot proceed')
-         return ;
-      }
+      // if (!question.answer) {
+      //    console.log('question not answered yet, cannot proceed')
+      //    return ;
+      // }
       const { questions } = this.state
 
       if (question.index < questions.length - 1) {
@@ -48,7 +59,7 @@ class App extends Component {
             ' question, no state reset happens')
       }
    }
-   
+
    handlePrevious(question) {
       if (question.index > 0) {
          this.setState({
