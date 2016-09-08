@@ -6,14 +6,17 @@ class Question extends Component {
       this.renderOption = this.renderOption.bind(this)
       this.onSelectOption = this.onSelectOption.bind(this)
       this.checked = this.checked.bind(this)
-      this.state = {
-         selected: props.question.answer
-      }
+      this.state = { selected: props.question.answer }
+   }
+
+   componentWillReceiveProps(nextProps) {
+      this.setState({
+         selected: nextProps.question.answer
+      })
    }
 
    render() {
       const { question } = this.props
-      console.log('child rendering')
       return (
          
          <div className="question-panel">
@@ -37,10 +40,6 @@ class Question extends Component {
    }
 
    checked(option) {
-      console.log('rendering option')
-      console.log('option: ' + option)
-      console.log('state: ' + this.state.selected)
-      console.info('result: ' + option === this.state.selected)
       return option === this.state.selected
    }
 

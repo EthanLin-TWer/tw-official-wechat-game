@@ -48,11 +48,7 @@ class App extends Component {
             ' question, no state reset happens')
       }
    }
-
-   shouldComponentUpdate() {
-      console.log('component should update')
-      return true
-   }
+   
    handlePrevious(question) {
       if (question.index > 0) {
          this.setState({
