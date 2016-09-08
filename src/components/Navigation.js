@@ -5,16 +5,14 @@ class Navigation extends Component {
       super(props)
       this.onPrevious = this.props.onPrevious.bind(this)
       this.onNext = this.props.onNext.bind(this)
-      this.showPrevious = this.props.showPrevious.bind(this)
-      this.showSubmit = this.props.showSubmit.bind(this)
    }
 
    render() {
-      const { showSubmit, showPrevious } = this.props
+      const { index, total } = this.props
       return (
          <ul className="pager">
-            { showPrevious() ? this.renderPrevious() : null }
-            { showSubmit() ? this.renderNext('提交') : this.renderNext('下一题') }
+            { this.showPrevious(index) ? this.renderPrevious() : null }
+            { this.showSubmit(index, total) ? this.renderNext('提交') : this.renderNext('下一题') }
          </ul>
       )
    }
@@ -37,6 +35,14 @@ class Navigation extends Component {
             </a>
          </li>
       )
+   }
+
+   showPrevious(index) {
+      return index > 0
+   }
+
+   showSubmit(index, total) {
+      return index === total - 1
    }
 
 }
