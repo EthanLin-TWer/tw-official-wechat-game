@@ -16,7 +16,7 @@ class Navigation extends Component {
       const { onPrevious } = this.props
       return (
          <li className="previous"><a
-            onClick={() => onPrevious(index)}><span aria-hidden="true">&larr;</span>上一题
+            onClick={() => onPrevious(index)}>上一题
          </a></li>
       )
    }
@@ -26,7 +26,7 @@ class Navigation extends Component {
       return (
          <li className="next">
             <a
-               onClick={() => onNext()}>{text}<span aria-hidden="true">&rarr;</span>
+               onClick={() => onNext()}>{text}
             </a>
          </li>
       )
