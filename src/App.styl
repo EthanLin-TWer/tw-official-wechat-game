@@ -1,43 +1,45 @@
 main-text-color = #021215 100%
 border-style = 1px solid #adb8c0
 
+image-vertical-position = 100%
+
 html
    margin: 0
    padding: 0
 
 @keyframes animatedBackground {
    from {
-      background-position: 0 0;
+      background-position: 0 image-vertical-position;
    }
    to {
-      background-position: 100% 0;
+      background-position: 100% image-vertical-position;
    }
 }
 
 @-webkit-keyframes animatedBackground {
    from {
-      background-position: 0 0;
+      background-position: 0 image-vertical-position;
    }
    to {
-      background-position: 100% 0;
+      background-position: 100% image-vertical-position;
    }
 }
 
 @-ms-keyframes animatedBackground {
    from {
-      background-position: 0 0;
+      background-position: 0 image-vertical-position;
    }
    to {
-      background-position: 100% 0;
+      background-position: 100% image-vertical-position;
    }
 }
 
 @-moz-keyframes animatedBackground {
    from {
-      background-position: 0 0;
+      background-position: 0 image-vertical-position;
    }
    to {
-      background-position: 100% 0;
+      background-position: 50% image-vertical-position;
    }
 }
 
@@ -45,15 +47,15 @@ body
    margin: 30px 20px 0!important
    max-width: 800px
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-   background: #000
-   background-image: url('./images/bg-clouds.png');
-   background-position: 0 0;
-   background-size: cover
+   background: url('./images/background/hill-1.svg'), url('./images/background/hill-2.svg'), url('./images/background/hill-3.svg')
+   background-color: #cccccc !important
+   background-repeat: no-repeat
+   background-position: bottom right
 
    animation: animatedBackground 60s linear infinite;
    -ms-animation: animatedBackground 60s linear infinite;
    -moz-animation: animatedBackground 60s linear infinite;
-   -webkit-animation: animatedBackground 60s linear infinite;
+   -webkit-animation: animatedBackground 10s linear infinite;
 
 .app-header
    display: inline-block
@@ -79,11 +81,9 @@ img[alt="header-cloud"]
 .option-container
    margin: 0 0 16px
    font-size: 16px
-   border: border-style
 
    .option
       margin: 0
-      font-family: "Kaiti SC Black"
       text-align: left
       display: block
 
@@ -96,6 +96,7 @@ img[alt="header-cloud"]
 
       .option-text
          margin-left: 32px
+         font-family: "Kaiti SC"
          display: block
          font-size: 16px
 
@@ -104,6 +105,12 @@ img[alt="header-cloud"]
 
 .option input:not(:checked) + b:before
    content: url('images/no.svg')
+
+.background-placeholder {
+   width: 100%
+   height: 50px;
+}
+
 
 // navigation
 .question-navigation

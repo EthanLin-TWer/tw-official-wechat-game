@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Question } from './pages'
-import { Navigation, Header, Footer } from './components'
+import { Navigation, Background, Header, Footer } from './components'
 
 import Data from './data/questions.json'
 import './App.styl'
@@ -60,6 +60,7 @@ class App extends Component {
          <div className="App">
             <Header />
             <Question question={questions[indexCurrent]}/>
+            <Background />
             <Navigation index={this.state.indexCurrent} total={this.state.questions.length}
                         onNext={this.onNext} onPrevious={this.renderPrevious}
             />
