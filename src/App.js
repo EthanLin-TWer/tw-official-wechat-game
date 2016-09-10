@@ -11,6 +11,7 @@ class App extends Component {
       super(props)
       this.handleNext = this.handleNext.bind(this)
       this.handlePrevious = this.handlePrevious.bind(this)
+      this.renderNext = this.renderNext.bind(this)
       this.state = {
          questions: this.loadQuestions(),
          indexCurrent: 0
@@ -26,7 +27,7 @@ class App extends Component {
       return (
          <div className="App">
             <Header />
-            <Question question={questions[indexCurrent]}/>
+            <Question question={questions[indexCurrent]} renderNext={this.renderNext}/>
             <Navigation index={this.state.indexCurrent} total={this.state.questions.length}
                onNext={this.handleNext} onPrevious={this.handlePrevious}
             />
@@ -35,9 +36,17 @@ class App extends Component {
       )
    }
 
+   renderNext(userAnswer) {
+      const { questions, indexCurrent } = this.state
+      questions[indexCurrent].userAnswer = userAnswer
+
+      if (indexCurrent < questions.length - 1) {
+         this.setState({ indexCurrent: indexCurrent + 1})
+      }
+   }
+
    handleNext(current) {
       const { questions } = this.state
-      if (!questions[current].userAnswer) return ;
 
       if (current < questions.length - 1) {
          this.setState({

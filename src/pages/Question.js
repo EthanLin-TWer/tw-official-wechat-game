@@ -4,46 +4,48 @@ class Question extends Component {
    constructor(props) {
       super(props)
       this.renderOption = this.renderOption.bind(this)
-      this.onSelectOption = this.onSelectOption.bind(this)
-      this.state = { selected: props.question.userAnswer }
+      this.onOptionSelected = this.onOptionSelected.bind(this)
+      this.state = { userAnswer: props.question.userAnswer }
    }
 
    componentWillReceiveProps(nextProps) {
       this.setState({
-         selected: nextProps.question.userAnswer
+         userAnswer: nextProps.question.userAnswer
       })
    }
 
    render() {
-      const { question } = this.props
+      const { question, renderNext } = this.props
       return (
 
          <div className="question-panel">
             <h4 className="question">{ question.question }</h4>
             <div className="question-image">{ question.images }</div>
             <div className="options">{
-               question.options.map((option, index) => this.renderOption(option, index))
+               question.options.map((option, index) => this.renderOption(option, index, renderNext))
             }</div>
          </div>
       )
    }
 
-   renderOption(option, index) {
+   renderOption(option, index, renderNext) {
       return (
          <label className="option" key={index} htmlFor={ `option${index}` }>
             <input id={ `option${index}` } type="radio" value={option} name="option"
-                   onChange={this.onSelectOption}
-                   checked={option === this.state.selected}/>
+                   onChange={this.onOptionSelected(renderNext)}
+                   checked={option === this.state.userAnswer}/>
             <i><span className="option-text">{option}</span></i>
          </label>
       )
    }
 
-   onSelectOption(event) {
-      this.props.question.userAnswer = event.target.value
-      this.setState({
-         selected: event.target.value
-      })
+   onOptionSelected(renderNext) {
+      return event => {
+         const userAnswer = event.target.value
+         this.setState({ userAnswer })
+         console.log('user answer: ' + userAnswer)
+         renderNext(userAnswer)
+      }
    }
 }
 

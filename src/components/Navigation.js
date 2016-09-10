@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 
 class Navigation extends Component {
-   constructor(props) {
-      super(props)
-      this.onPrevious = this.props.onPrevious.bind(this)
-      this.onNext = this.props.onNext.bind(this)
-   }
 
    render() {
       const { index, total } = this.props
