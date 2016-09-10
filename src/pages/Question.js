@@ -5,7 +5,6 @@ class Question extends Component {
       super(props)
       this.renderOption = this.renderOption.bind(this)
       this.onSelectOption = this.onSelectOption.bind(this)
-      this.checked = this.checked.bind(this)
       this.state = { selected: props.question.userAnswer }
    }
 
@@ -33,14 +32,11 @@ class Question extends Component {
       return (
          <label className="option" key={index} htmlFor={ `option${index}` }>
             <input id={ `option${index}` } type="radio" value={option} name="option"
-                   onChange={this.onSelectOption} checked={this.checked(option)}/>
+                   onChange={this.onSelectOption}
+                   checked={option === this.state.selected}/>
             <i><span className="option-text">{option}</span></i>
          </label>
       )
-   }
-
-   checked(option) {
-      return option === this.state.selected
    }
 
    onSelectOption(event) {
