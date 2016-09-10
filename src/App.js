@@ -19,25 +19,36 @@ class App extends Component {
    }
 
    static loadQuestions() {
-      return App.random(Data, 2).map((question, index) => ({ ...question, index })).map(question => {
-         let options = App.random(question.options, 4)
-         return {...question, options}
-      })
+      return App.shuffleQuestions(Data).map((question, index) => ({
+         ...question,
+         index
+      })).map(question => ({
+         ...question,
+         options: App.shuffleOptions(question.options)
+      }))
    }
 
-   static random(questions, number) {
-      if (questions.length < number) return questions
+   static shuffleQuestions(questions) {
+      return App.random(questions, 2)
+   }
+
+   static shuffleOptions(options) {
+      return App.random(options, 4)
+   }
+
+   static random(array, number) {
+      if (array.length < number) return array
       let choosedIndecies = []
       let result = []
 
       while (result.length < number) {
          let index
          do {
-            index = Math.floor(Math.random() * questions.length)
+            index = Math.floor(Math.random() * array.length)
          } while (choosedIndecies.includes(index))
 
          choosedIndecies.push(index)
-         result.push(questions[index])
+         result.push(array[index])
       }
 
       return result
@@ -58,7 +69,7 @@ class App extends Component {
    }
 
    renderPrevious(current) {
-      if (current <= 0) return ;
+      if (current <= 0) return;
 
       this.setState({ indexCurrent: current - 1 })
    }
