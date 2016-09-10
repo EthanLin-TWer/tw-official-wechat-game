@@ -11,7 +11,7 @@
     "images": [
       "./src/images/img11111111.jpg"
     ],
-    "rightAnswer": "question-bbbbb-1",
+    "correctAnswer": "question-bbbbb-1",
     "userAnswer": ""
   },
   {
@@ -26,7 +26,7 @@
     "images": [
       "./src/images/img22222222.jpg"
     ],
-    "rightAnswer": "question-ccccc-2",
+    "correctAnswer": "question-ccccc-2",
     "userAnswer": ""
   },
   {
@@ -41,7 +41,7 @@
     "images": [
       "./src/images/img33333333.jpg"
     ],
-    "rightAnswer": "question-ddddd-3",
+    "correctAnswer": "question-ddddd-3",
     "userAnswer": ""
   },
   {
@@ -56,7 +56,7 @@
     "images": [
       "./src/images/img44444444.jpg"
     ],
-    "rightAnswer": "question-aaaaa-4",
+    "correctAnswer": "question-aaaaa-4",
     "userAnswer": ""
   },
   {
@@ -71,7 +71,7 @@
     "images": [
       "./src/images/img55555555.jpg"
     ],
-    "rightAnswer": "question-bbbbb-5",
+    "correctAnswer": "question-bbbbb-5",
     "userAnswer": ""
   },
   {
@@ -86,7 +86,7 @@
     "images": [
       "./src/images/img66666666.jpg"
     ],
-    "rightAnswer": "question-ccccc-6",
+    "correctAnswer": "question-ccccc-6",
     "userAnswer": ""
   },
   {
@@ -101,7 +101,7 @@
     "images": [
       "./src/images/img77777777.jpg"
     ],
-    "rightAnswer": "question-ddddd-7",
+    "correctAnswer": "question-ddddd-7",
     "userAnswer": ""
   },
   {
@@ -116,7 +116,7 @@
     "images": [
       "./src/images/img88888888.jpg"
     ],
-    "rightAnswer": "question-aaaaa-8",
+    "correctAnswer": "question-aaaaa-8",
     "userAnswer": ""
   },
   {
@@ -131,7 +131,7 @@
     "images": [
       "./src/images/img99999999.jpg"
     ],
-    "rightAnswer": "question-bbbbb-9",
+    "correctAnswer": "question-bbbbb-9",
     "userAnswer": ""
   },
   {
@@ -146,7 +146,7 @@
     "images": [
       "./src/images/img1010101010101010.jpg"
     ],
-    "rightAnswer": "question-ccccc-10",
+    "correctAnswer": "question-ccccc-10",
     "userAnswer": ""
   },
   {
@@ -161,7 +161,7 @@
     "images": [
       "./src/images/img1111111111111111.jpg"
     ],
-    "rightAnswer": "question-ddddd-11",
+    "correctAnswer": "question-ddddd-11",
     "userAnswer": ""
   },
   {
@@ -176,7 +176,7 @@
     "images": [
       "./src/images/img1212121212121212.jpg"
     ],
-    "rightAnswer": "question-aaaaa-12",
+    "correctAnswer": "question-aaaaa-12",
     "userAnswer": ""
   },
   {
@@ -191,7 +191,7 @@
     "images": [
       "./src/images/img1313131313131313.jpg"
     ],
-    "rightAnswer": "question-bbbbb-13",
+    "correctAnswer": "question-bbbbb-13",
     "userAnswer": ""
   },
   {
@@ -206,7 +206,7 @@
     "images": [
       "./src/images/img1414141414141414.jpg"
     ],
-    "rightAnswer": "question-ccccc-14",
+    "correctAnswer": "question-ccccc-14",
     "userAnswer": ""
   },
   {
@@ -221,7 +221,7 @@
     "images": [
       "./src/images/img1515151515151515.jpg"
     ],
-    "rightAnswer": "question-ddddd-15",
+    "correctAnswer": "question-ddddd-15",
     "userAnswer": ""
   },
   {
@@ -236,7 +236,7 @@
     "images": [
       "./src/images/img1616161616161616.jpg"
     ],
-    "rightAnswer": "question-aaaaa-16",
+    "correctAnswer": "question-aaaaa-16",
     "userAnswer": ""
   },
   {
@@ -251,7 +251,7 @@
     "images": [
       "./src/images/img1717171717171717.jpg"
     ],
-    "rightAnswer": "question-bbbbb-17",
+    "correctAnswer": "question-bbbbb-17",
     "userAnswer": ""
   },
   {
@@ -266,7 +266,7 @@
     "images": [
       "./src/images/img1818181818181818.jpg"
     ],
-    "rightAnswer": "question-ccccc-18",
+    "correctAnswer": "question-ccccc-18",
     "userAnswer": ""
   },
   {
@@ -281,7 +281,7 @@
     "images": [
       "./src/images/img1919191919191919.jpg"
     ],
-    "rightAnswer": "question-ddddd-19",
+    "correctAnswer": "question-ddddd-19",
     "userAnswer": ""
   },
   {
@@ -296,7 +296,7 @@
     "images": [
       "./src/images/img2020202020202020.jpg"
     ],
-    "rightAnswer": "question-aaaaa-20",
+    "correctAnswer": "question-aaaaa-20",
     "userAnswer": ""
   }
 ]

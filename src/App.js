@@ -55,8 +55,13 @@ class App extends Component {
       question.userAnswer = answer
    }
 
-   onSubmit(current) {
-      
+   onSubmit() {
+      const { questions } = this.state
+      if (questions.every(question => question.userAnswer)) {
+         const correctAnswers = questions.filter(those => those.correctAnswer === those.userAnswer).length
+         const score = correctAnswers / questions.length * 100
+         console.log('your score: ' + score)
+      }
    }
 }
 

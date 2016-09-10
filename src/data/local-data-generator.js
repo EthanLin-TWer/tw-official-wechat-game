@@ -8,7 +8,7 @@ for (let i = 1; i <= 20; i++) {
 		question: 'question-' + i.toString().repeat(8),
 		options: options.map(option => 'question-' + option.repeat(5) + '-' + i),
 		images: ['./src/images/img' + i.toString().repeat(8) + '.jpg'],
-      rightAnswer: 'question-' + options[i % 4].repeat(5) + '-' + i,
+      correctAnswer: 'question-' + options[i % 4].repeat(5) + '-' + i,
       userAnswer: ''
 	})
 }
