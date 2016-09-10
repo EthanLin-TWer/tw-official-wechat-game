@@ -11,7 +11,8 @@
     "images": [
       "./src/images/img11111111.jpg"
     ],
-    "rightAnswer": "question-bbbbb-1"
+    "rightAnswer": "question-bbbbb-1",
+    "userAnswer": ""
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@
     "images": [
       "./src/images/img22222222.jpg"
     ],
-    "rightAnswer": "question-ccccc-2"
+    "rightAnswer": "question-ccccc-2",
+    "userAnswer": ""
   },
   {
     "id": 3,
@@ -39,7 +41,8 @@
     "images": [
       "./src/images/img33333333.jpg"
     ],
-    "rightAnswer": "question-ddddd-3"
+    "rightAnswer": "question-ddddd-3",
+    "userAnswer": ""
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@
     "images": [
       "./src/images/img44444444.jpg"
     ],
-    "rightAnswer": "question-aaaaa-4"
+    "rightAnswer": "question-aaaaa-4",
+    "userAnswer": ""
   },
   {
     "id": 5,
@@ -67,7 +71,8 @@
     "images": [
       "./src/images/img55555555.jpg"
     ],
-    "rightAnswer": "question-bbbbb-5"
+    "rightAnswer": "question-bbbbb-5",
+    "userAnswer": ""
   },
   {
     "id": 6,
@@ -81,7 +86,8 @@
     "images": [
       "./src/images/img66666666.jpg"
     ],
-    "rightAnswer": "question-ccccc-6"
+    "rightAnswer": "question-ccccc-6",
+    "userAnswer": ""
   },
   {
     "id": 7,
@@ -95,7 +101,8 @@
     "images": [
       "./src/images/img77777777.jpg"
     ],
-    "rightAnswer": "question-ddddd-7"
+    "rightAnswer": "question-ddddd-7",
+    "userAnswer": ""
   },
   {
     "id": 8,
@@ -109,7 +116,8 @@
     "images": [
       "./src/images/img88888888.jpg"
     ],
-    "rightAnswer": "question-aaaaa-8"
+    "rightAnswer": "question-aaaaa-8",
+    "userAnswer": ""
   },
   {
     "id": 9,
@@ -123,7 +131,8 @@
     "images": [
       "./src/images/img99999999.jpg"
     ],
-    "rightAnswer": "question-bbbbb-9"
+    "rightAnswer": "question-bbbbb-9",
+    "userAnswer": ""
   },
   {
     "id": 10,
@@ -137,7 +146,8 @@
     "images": [
       "./src/images/img1010101010101010.jpg"
     ],
-    "rightAnswer": "question-ccccc-10"
+    "rightAnswer": "question-ccccc-10",
+    "userAnswer": ""
   },
   {
     "id": 11,
@@ -151,7 +161,8 @@
     "images": [
       "./src/images/img1111111111111111.jpg"
     ],
-    "rightAnswer": "question-ddddd-11"
+    "rightAnswer": "question-ddddd-11",
+    "userAnswer": ""
   },
   {
     "id": 12,
@@ -165,7 +176,8 @@
     "images": [
       "./src/images/img1212121212121212.jpg"
     ],
-    "rightAnswer": "question-aaaaa-12"
+    "rightAnswer": "question-aaaaa-12",
+    "userAnswer": ""
   },
   {
     "id": 13,
@@ -179,7 +191,8 @@
     "images": [
       "./src/images/img1313131313131313.jpg"
     ],
-    "rightAnswer": "question-bbbbb-13"
+    "rightAnswer": "question-bbbbb-13",
+    "userAnswer": ""
   },
   {
     "id": 14,
@@ -193,7 +206,8 @@
     "images": [
       "./src/images/img1414141414141414.jpg"
     ],
-    "rightAnswer": "question-ccccc-14"
+    "rightAnswer": "question-ccccc-14",
+    "userAnswer": ""
   },
   {
     "id": 15,
@@ -207,7 +221,8 @@
     "images": [
       "./src/images/img1515151515151515.jpg"
     ],
-    "rightAnswer": "question-ddddd-15"
+    "rightAnswer": "question-ddddd-15",
+    "userAnswer": ""
   },
   {
     "id": 16,
@@ -221,7 +236,8 @@
     "images": [
       "./src/images/img1616161616161616.jpg"
     ],
-    "rightAnswer": "question-aaaaa-16"
+    "rightAnswer": "question-aaaaa-16",
+    "userAnswer": ""
   },
   {
     "id": 17,
@@ -235,7 +251,8 @@
     "images": [
       "./src/images/img1717171717171717.jpg"
     ],
-    "rightAnswer": "question-bbbbb-17"
+    "rightAnswer": "question-bbbbb-17",
+    "userAnswer": ""
   },
   {
     "id": 18,
@@ -249,7 +266,8 @@
     "images": [
       "./src/images/img1818181818181818.jpg"
     ],
-    "rightAnswer": "question-ccccc-18"
+    "rightAnswer": "question-ccccc-18",
+    "userAnswer": ""
   },
   {
     "id": 19,
@@ -263,7 +281,8 @@
     "images": [
       "./src/images/img1919191919191919.jpg"
     ],
-    "rightAnswer": "question-ddddd-19"
+    "rightAnswer": "question-ddddd-19",
+    "userAnswer": ""
   },
   {
     "id": 20,
@@ -277,6 +296,7 @@
     "images": [
       "./src/images/img2020202020202020.jpg"
     ],
-    "rightAnswer": "question-aaaaa-20"
+    "rightAnswer": "question-aaaaa-20",
+    "userAnswer": ""
   }
 ]

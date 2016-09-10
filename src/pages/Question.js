@@ -6,12 +6,12 @@ class Question extends Component {
       this.renderOption = this.renderOption.bind(this)
       this.onSelectOption = this.onSelectOption.bind(this)
       this.checked = this.checked.bind(this)
-      this.state = { selected: props.question.answer }
+      this.state = { selected: props.question.userAnswer }
    }
 
    componentWillReceiveProps(nextProps) {
       this.setState({
-         selected: nextProps.question.answer
+         selected: nextProps.question.userAnswer
       })
    }
 
@@ -44,7 +44,7 @@ class Question extends Component {
    }
 
    onSelectOption(event) {
-      this.props.question.answer = event.target.value
+      this.props.question.userAnswer = event.target.value
       this.setState({
          selected: event.target.value
       })

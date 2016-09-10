@@ -12,9 +12,13 @@ class App extends Component {
       this.handleNext = this.handleNext.bind(this)
       this.handlePrevious = this.handlePrevious.bind(this)
       this.state = {
-         questions: Data.map((question, index) => ({ ...question, index, answer: '' })),
+         questions: this.loadQuestions(),
          indexCurrent: 0
       }
+   }
+
+   loadQuestions() {
+      return Data.map((question, index) => ({ ...question, index, answer: '' }))
    }
 
    render() {
@@ -33,18 +37,12 @@ class App extends Component {
 
    handleNext(current) {
       const { questions } = this.state
-      if (!questions[current].answer) {
-         console.log('question not answered yet, cannot proceed')
-         return ;
-      }
+      if (!questions[current].userAnswer) return ;
 
       if (current < questions.length - 1) {
          this.setState({
             indexCurrent: current + 1
          })
-      } else {
-         console.log('current index is ' + current + ' which indicates it is the last' +
-            ' question, no state reset happens')
       }
    }
 
@@ -53,8 +51,6 @@ class App extends Component {
          this.setState({
             indexCurrent: current - 1
          })
-      } else {
-         console.log('current index is 0 which indicates it is the first question, no state reset happens')
       }
    }
 }
