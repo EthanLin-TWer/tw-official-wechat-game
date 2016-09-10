@@ -19,8 +19,7 @@ class Question extends Component {
       return (
 
          <div className="question-panel">
-            <h4 className="question">{ question.question }</h4>
-            <div className="question-image">{ question.images }</div>
+            <h4 className="question-content">{ question.question }</h4>
             <div className="options">{
                question.options.map((option, index) => this.renderOption(option, index, renderNext))
             }</div>
@@ -30,12 +29,14 @@ class Question extends Component {
 
    renderOption(option, index, renderNext) {
       return (
-         <label className="option" key={index} htmlFor={ `option${index}` }>
-            <input id={ `option${index}` } type="radio" value={option} name="option"
-                   onChange={this.onOptionSelected(renderNext)}
-                   checked={option === this.state.userAnswer}/>
-            <i><span className="option-text">{option}</span></i>
-         </label>
+         <div className="option-container">
+            <label className="option" key={index} htmlFor={ `option${index}` }>
+               <input id={ `option${index}` } type="radio" value={option} name="option"
+                      onChange={this.onOptionSelected(renderNext)}
+                      checked={option === this.state.userAnswer}/>
+               <i><span className="option-text">{option}</span></i>
+            </label>
+         </div>
       )
    }
 

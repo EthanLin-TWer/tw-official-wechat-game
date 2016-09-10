@@ -1,107 +1,117 @@
 html
-  margin: 0
-  padding: 0
+   margin: 0
+   padding: 0
 
 @keyframes animatedBackground {
-  from { background-position: 0 0; }
-  to { background-position: 100% 0; }
-}
-@-webkit-keyframes animatedBackground {
-  from { background-position: 0 0; }
-  to { background-position: 100% 0; }
-}
-@-ms-keyframes animatedBackground {
-  from { background-position: 0 0; }
-  to { background-position: 100% 0; }
-}
-@-moz-keyframes animatedBackground {
-  from { background-position: 0 0; }
-  to { background-position: 100% 0; }
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: 100% 0;
+   }
 }
 
+@-webkit-keyframes animatedBackground {
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: 100% 0;
+   }
+}
+
+@-ms-keyframes animatedBackground {
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: 100% 0;
+   }
+}
+
+@-moz-keyframes animatedBackground {
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: 100% 0;
+   }
+}
 
 body
-  margin: 0 auto !important
-  max-width: 800px
-  background: #000
-  background-image: url('./images/bg-clouds.png');
-  background-position: 0px 0px;
-  background-size: cover
+   margin: 30px 20px 0!important
+   max-width: 800px
+   background: #000
+   background-image: url('./images/bg-clouds.png');
+   background-position: 0px 0px;
+   background-size: cover
 
-  animation: animatedBackground 60s linear infinite;
-  -ms-animation: animatedBackground 60s linear infinite;
-  -moz-animation: animatedBackground 60s linear infinite;
-  -webkit-animation: animatedBackground 60s linear infinite;
+   animation: animatedBackground 60s linear infinite;
+   -ms-animation: animatedBackground 60s linear infinite;
+   -moz-animation: animatedBackground 60s linear infinite;
+   -webkit-animation: animatedBackground 60s linear infinite;
 
-.question-panel 
-  padding: 1em
-  font-size: 11px
+.app-header
+   display: inline-block
+   width: 100%
 
-
-.question 
-  margin: 15px 0
-  font-weight: bold
-  text-align: left
-
-
-.option 
-  margin: 1em 0
-  padding: 10px
-  //background: #3d9970
-  //border-radius: 5px
-  text-align: left
-  display: block
-  //border-bottom: 1px solid #ddd
-
-
-input[type="radio"] 
-  display: none
-
-
-label 
-  margin: 0 !important
-
+img[alt="header-cloud"]
+   display: block
+   width: 25%
+   height: 25%
+   float: right
 
 border-style = 1px solid #adb8c0
 
-.option
-  //border: border-style
+.question-panel
+   font-size: 11px
 
+.question-content
+   margin: 10px 0 20px 0
+   text-align: left
+
+.option-container
+   margin: 0 0 16px
+   border: border-style
+
+   &:selection
+      background: #000
+
+.option
+   margin: 1em 0
+   text-align: left
+   display: block
+
+input[type="radio"]
+   display: none
+
+label
+   margin: 0 !important
 
 .option i:before
-  display: inline-block
-  position: absolute
-  //top: 50%
-  height: 20px
-  width: 20px
+   display: inline-block
+   position: absolute
+   //top: 50%
+   height: 20px
+   width: 20px
 
 .option-text
-  margin-left: 25px
-  display: block
+   margin-left: 25px
+   display: block
 
 .option input:checked + i:before
-  font-size: 18px
-  content: '\2714'
-  color: #05f1b2
-
+   content: url('images/yes.svg')
+   color: #05f1b2
 
 .option input:not(:checked) + i:before
-  border: 1px solid #999;
-  border-radius: 50%
-  content: ' '
-
-
-// header
-.app-header
-  width: 100%
-
+   content: url('images/no.svg')
 
 // navigation
 .question-navigation
-  margin: 0 1em
+   margin: 0 1em
 
 .previous-question-button
-  float: left
+   float: left
 
 .next-question-button
-  float: right
+   float: right

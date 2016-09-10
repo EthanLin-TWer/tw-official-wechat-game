@@ -1,9 +1,9 @@
 import React from 'react'
-import logo from '../images/header/never-stop-learning-portrait.jpg'
+import logo from '../images/header/cloud.png'
 
 const Header = () => (
     <div className="app-header">
-        <img src={logo} alt="ThoughtWorks" className="img-responsive"/>
+        <img src={logo} alt="header-cloud" className="img-responsive"/>
     </div>
 )
 
