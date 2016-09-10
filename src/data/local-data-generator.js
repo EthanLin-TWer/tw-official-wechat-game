@@ -7,7 +7,8 @@ for (let i = 1; i <= 20; i++) {
 		id: i,
 		question: 'question-' + i.toString().repeat(8),
 		options: options.map(option => 'question-' + option.repeat(5) + '-' + i),
-		images: ['./src/images/img' + i.toString().repeat(8) + '.jpg']
+		images: ['./src/images/img' + i.toString().repeat(8) + '.jpg'],
+      rightAnswer: 'question-' + options[i % 4].repeat(5) + '-' + i
 	})
 }
 fs.writeFile('./questions.json', JSON.stringify(data, null, '  '))
