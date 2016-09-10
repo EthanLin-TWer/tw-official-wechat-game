@@ -16,22 +16,24 @@ class App extends Component {
          questions: App.loadQuestions(),
          indexCurrent: 0
       }
-      console.log(this.state.questions)
    }
 
    static loadQuestions() {
-      return App.random(Data, 15).map((question, index) => ({ ...question, index }))
+      return App.random(Data, 2).map((question, index) => ({ ...question, index })).map(question => {
+         let options = App.random(question.options, 4)
+         return {...question, options}
+      })
    }
 
    static random(questions, number) {
-      if (questions.length <= number) return questions
+      if (questions.length < number) return questions
       let choosedIndecies = []
       let result = []
 
       while (result.length < number) {
          let index
          do {
-            index = (Math.random() * questions.length).toFixed(0)
+            index = Math.floor(Math.random() * questions.length)
          } while (choosedIndecies.includes(index))
 
          choosedIndecies.push(index)
@@ -73,8 +75,10 @@ class App extends Component {
    onSubmit() {
       const { questions } = this.state
       if (questions.every(question => question.userAnswer)) {
-         const correctAnswers = questions.filter(those => those.correctAnswer === those.userAnswer).length
-         const score = correctAnswers / questions.length * 100
+         const correctAnswers = questions.filter(those => {
+            return those.correctAnswer === those.userAnswer
+         }).length
+         const score = Math.round(correctAnswers / questions.length * 100)
          console.log('your score: ' + score)
       }
    }
