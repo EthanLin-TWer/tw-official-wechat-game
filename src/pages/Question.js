@@ -43,7 +43,6 @@ class Question extends Component {
       return event => {
          const userAnswer = event.target.value
          this.setState({ userAnswer })
-         console.log('user answer: ' + userAnswer)
          renderNext(userAnswer)
       }
    }

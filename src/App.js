@@ -9,16 +9,16 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 class App extends Component {
    constructor(props) {
       super(props)
-      this.handleNext = this.handleNext.bind(this)
-      this.handlePrevious = this.handlePrevious.bind(this)
+      this.onSubmit = this.onSubmit.bind(this)
+      this.renderPrevious = this.renderPrevious.bind(this)
       this.renderNext = this.renderNext.bind(this)
       this.state = {
-         questions: this.loadQuestions(),
+         questions: App.loadQuestions(),
          indexCurrent: 0
       }
    }
 
-   loadQuestions() {
+   static loadQuestions() {
       return Data.map((question, index) => ({ ...question, index, answer: '' }))
    }
 
@@ -29,38 +29,34 @@ class App extends Component {
             <Header />
             <Question question={questions[indexCurrent]} renderNext={this.renderNext}/>
             <Navigation index={this.state.indexCurrent} total={this.state.questions.length}
-               onNext={this.handleNext} onPrevious={this.handlePrevious}
+                        onSubmit={this.onSubmit} onPrevious={this.renderPrevious}
             />
             <Footer />
          </div>
       )
    }
 
+   renderPrevious(current) {
+      if (current <= 0) return ;
+
+      this.setState({ indexCurrent: current - 1 })
+   }
+
    renderNext(userAnswer) {
       const { questions, indexCurrent } = this.state
-      questions[indexCurrent].userAnswer = userAnswer
+      this.saveUserAnswer(questions[indexCurrent], userAnswer)
 
       if (indexCurrent < questions.length - 1) {
-         this.setState({ indexCurrent: indexCurrent + 1})
+         this.setState({ indexCurrent: indexCurrent + 1 })
       }
    }
 
-   handleNext(current) {
-      const { questions } = this.state
-
-      if (current < questions.length - 1) {
-         this.setState({
-            indexCurrent: current + 1
-         })
-      }
+   saveUserAnswer(question, answer) {
+      question.userAnswer = answer
    }
 
-   handlePrevious(current) {
-      if (current > 0) {
-         this.setState({
-            indexCurrent: current - 1
-         })
-      }
+   onSubmit(current) {
+      
    }
 }
 

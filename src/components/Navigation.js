@@ -6,13 +6,13 @@ class Navigation extends Component {
       const { index, total } = this.props
       return (
          <ul className="pager">
-            { this.showPrevious(index) ? this.onPrevious(index) : null }
-            { this.showSubmit(index, total) ? this.onNext(index) : null }
+            { Navigation.showPrevious(index) ? this.renderPreviousButton(index) : null }
+            { Navigation.showSubmit(index, total) ? this.renderSubmitButton(index) : null }
          </ul>
       )
    }
 
-   onPrevious(index) {
+   renderPreviousButton(index) {
       const { onPrevious } = this.props
       return (
          <li className="previous"><a
@@ -21,22 +21,22 @@ class Navigation extends Component {
       )
    }
 
-   onNext(index) {
-      const { onNext } = this.props
+   renderSubmitButton(index) {
+      const { onSubmit } = this.props
       return (
          <li className="next">
             <a
-               onClick={() => onNext(index)}>提交<span aria-hidden="true">&rarr;</span>
+               onClick={() => onSubmit(index)}>提交<span aria-hidden="true">&rarr;</span>
             </a>
          </li>
       )
    }
 
-   showPrevious(index) {
+   static showPrevious(index) {
       return index > 0
    }
 
-   showSubmit(index, total) {
+   static showSubmit(index, total) {
       return index === total - 1
    }
 
