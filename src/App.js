@@ -9,7 +9,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 class App extends Component {
    constructor(props) {
       super(props)
-      this.onSubmit = this.onSubmit.bind(this)
+      this.onNext = this.onNext.bind(this)
       this.renderPrevious = this.renderPrevious.bind(this)
       this.renderNext = this.renderNext.bind(this)
       this.state = {
@@ -29,7 +29,7 @@ class App extends Component {
    }
 
    static shuffleQuestions(questions) {
-      return App.random(questions, 2)
+      return App.random(questions, 4)
    }
 
    static shuffleOptions(options) {
@@ -59,9 +59,9 @@ class App extends Component {
       return (
          <div className="App">
             <Header />
-            <Question question={questions[indexCurrent]} renderNext={this.renderNext}/>
+            <Question question={questions[indexCurrent]}/>
             <Navigation index={this.state.indexCurrent} total={this.state.questions.length}
-                        onSubmit={this.onSubmit} onPrevious={this.renderPrevious}
+                        onNext={this.onNext} onPrevious={this.renderPrevious}
             />
             <Footer />
          </div>
@@ -83,8 +83,19 @@ class App extends Component {
       }
    }
 
-   onSubmit() {
-      const { questions } = this.state
+   onNext() {
+      const { questions, indexCurrent } = this.state
+      // if (!questions[indexCurrent].userAnswer) return ;
+
+      if (indexCurrent < questions.length - 1) {
+         this.setState({ indexCurrent: indexCurrent + 1})
+         return ;
+      }
+
+      this.calculateScore(questions);
+   }
+
+   calculateScore(questions) {
       if (questions.every(question => question.userAnswer)) {
          const correctAnswers = questions.filter(those => {
             return those.correctAnswer === those.userAnswer

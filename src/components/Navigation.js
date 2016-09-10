@@ -7,7 +7,7 @@ class Navigation extends Component {
       return (
          <ul className="pager">
             { Navigation.showPrevious(index) ? this.renderPreviousButton(index) : null }
-            { Navigation.showSubmit(index, total) ? this.renderSubmitButton() : null }
+            { Navigation.showSubmit(index, total) ? this.renderNextButton('提交') : this.renderNextButton('下一题') }
          </ul>
       )
    }
@@ -21,12 +21,12 @@ class Navigation extends Component {
       )
    }
 
-   renderSubmitButton() {
-      const { onSubmit } = this.props
+   renderNextButton(text) {
+      const { onNext } = this.props
       return (
          <li className="next">
             <a
-               onClick={() => onSubmit()}>提交<span aria-hidden="true">&rarr;</span>
+               onClick={() => onNext()}>{text}<span aria-hidden="true">&rarr;</span>
             </a>
          </li>
       )

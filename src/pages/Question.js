@@ -15,36 +15,36 @@ class Question extends Component {
    }
 
    render() {
-      const { question, renderNext } = this.props
+      const { question } = this.props
       return (
 
          <div className="question-panel">
             <h4 className="question-content">{ question.question }</h4>
             <div className="options">{
-               question.options.map((option, index) => this.renderOption(option, index, renderNext))
+               question.options.map((option, index) => this.renderOption(option, index, question))
             }</div>
          </div>
       )
    }
 
-   renderOption(option, index, renderNext) {
+   renderOption(option, index, question) {
       return (
          <div className="option-container">
             <label className="option" key={index} htmlFor={ `option${index}` }>
                <input id={ `option${index}` } type="radio" value={option} name="option"
-                      onChange={this.onOptionSelected(renderNext)}
+                      onChange={this.onOptionSelected(question)}
                       checked={option === this.state.userAnswer}/>
-               <i><span className="option-text">{option}</span></i>
+               <b><span className="option-text">{option}</span></b>
             </label>
          </div>
       )
    }
 
-   onOptionSelected(renderNext) {
+   onOptionSelected(question) {
       return event => {
          const userAnswer = event.target.value
+         question.userAnswer = userAnswer
          this.setState({ userAnswer })
-         renderNext(userAnswer)
       }
    }
 }

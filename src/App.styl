@@ -1,3 +1,6 @@
+main-text-color = #021215 100%
+border-style = 1px solid #adb8c0
+
 html
    margin: 0
    padding: 0
@@ -41,9 +44,10 @@ html
 body
    margin: 30px 20px 0!important
    max-width: 800px
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
    background: #000
    background-image: url('./images/bg-clouds.png');
-   background-position: 0px 0px;
+   background-position: 0 0;
    background-size: cover
 
    animation: animatedBackground 60s linear infinite;
@@ -61,49 +65,44 @@ img[alt="header-cloud"]
    height: 25%
    float: right
 
-border-style = 1px solid #adb8c0
 
 .question-panel
-   font-size: 11px
+   line-height: 1.5
+   color: main-text-color
 
 .question-content
    margin: 10px 0 20px 0
+   font-family: "Kaiti SC"
+   font-weight: bold
    text-align: left
 
 .option-container
    margin: 0 0 16px
+   font-size: 16px
    border: border-style
 
-   &:selection
-      background: #000
+   .option
+      margin: 0
+      font-family: "Kaiti SC Black"
+      text-align: left
+      display: block
 
-.option
-   margin: 1em 0
-   text-align: left
-   display: block
+      input[type="radio"]
+         display: none
 
-input[type="radio"]
-   display: none
+      b:before
+         display: inline-block
+         position: absolute
 
-label
-   margin: 0 !important
+      .option-text
+         margin-left: 32px
+         display: block
+         font-size: 16px
 
-.option i:before
-   display: inline-block
-   position: absolute
-   //top: 50%
-   height: 20px
-   width: 20px
-
-.option-text
-   margin-left: 25px
-   display: block
-
-.option input:checked + i:before
+.option input:checked + b:before
    content: url('images/yes.svg')
-   color: #05f1b2
 
-.option input:not(:checked) + i:before
+.option input:not(:checked) + b:before
    content: url('images/no.svg')
 
 // navigation
