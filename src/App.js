@@ -16,10 +16,11 @@ class App extends Component {
          questions: App.loadQuestions(),
          indexCurrent: 0
       }
+      console.log(this.state.questions)
    }
 
    static loadQuestions() {
-      return App.random(Data, 10).map((question, index) => ({ ...question, index }))
+      return App.random(Data, 15).map((question, index) => ({ ...question, index }))
    }
 
    static random(questions, number) {
@@ -62,15 +63,11 @@ class App extends Component {
 
    renderNext(userAnswer) {
       const { questions, indexCurrent } = this.state
-      this.saveUserAnswer(questions[indexCurrent], userAnswer)
+      questions[indexCurrent].userAnswer = userAnswer
 
       if (indexCurrent < questions.length - 1) {
          this.setState({ indexCurrent: indexCurrent + 1 })
       }
-   }
-
-   saveUserAnswer(question, answer) {
-      question.userAnswer = answer
    }
 
    onSubmit() {
