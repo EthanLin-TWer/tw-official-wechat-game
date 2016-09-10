@@ -19,7 +19,25 @@ class App extends Component {
    }
 
    static loadQuestions() {
-      return Data.map((question, index) => ({ ...question, index, answer: '' }))
+      return App.random(Data, 10).map((question, index) => ({ ...question, index }))
+   }
+
+   static random(questions, number) {
+      if (questions.length <= number) return questions
+      let choosedIndecies = []
+      let result = []
+
+      while (result.length < number) {
+         let index
+         do {
+            index = (Math.random() * questions.length).toFixed(0)
+         } while (choosedIndecies.includes(index))
+
+         choosedIndecies.push(index)
+         result.push(questions[index])
+      }
+
+      return result
    }
 
    render() {
