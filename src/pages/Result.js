@@ -6,39 +6,26 @@ class Result extends Component {
 
    constructor(props) {
       super(props)
-      this.state = {
-         record: {
-            id: '',
-            score: '',
-            ranking: 0
-         }
-      }
+      this.state = { record: {} }
    }
 
    componentDidMount() {
-      const record = JSON.parse(localStorage.getItem('record'))
+      const questions = JSON.parse(localStorage.getItem('questions'))
+      const record = this.calculateScore(questions)
       const request = http.request({
          hostname: 'localhost',
          port: 8080,
          path: '/tw-game/record',
          method: 'POST',
-         headers: {
-            'Content-Type': 'application/json'
-         }
+         headers: { 'Content-Type': 'application/json' }
       }, response => {
          response.on('data', content => {
             const id = JSON.parse(content).id
-
             http.get('http://localhost:8080/tw-game/record/' + id + '/defeatPercent', response => {
                response.on('data', content => {
-                  const ranking = content
                   this.setState({
-                     record: {
-                        ...record, ranking
-                     }
+                     record: { ...record, ranking: content }
                   })
-                  console.log(ranking)
-                  console.log(this.state)
                })
             })
          })
@@ -46,6 +33,22 @@ class Result extends Component {
       request.write(JSON.stringify(record))
       request.end()
 
+   }
+
+   calculateScore(questions) {
+      if (!questions.every(question => question.userAnswer)) {
+         console.log('perhaps you have questions not filling up')
+      }
+
+      const correctAnswers = questions.filter(those => {
+         return those.correctAnswer === those.userAnswer
+      }).length
+      const score = Math.round(correctAnswers / questions.length * 100)
+
+      return {
+         id: new Date().getTime(),
+         score: score
+      }
    }
 
    render() {

@@ -29,7 +29,7 @@ class App extends Component {
    }
 
    static shuffleQuestions(questions) {
-      return App.random(questions, 2)
+      return App.random(questions, 5)
    }
 
    static shuffleOptions(options) {
@@ -86,30 +86,14 @@ class App extends Component {
 
    onNext() {
       const { questions, indexCurrent } = this.state
-      // if (!questions[indexCurrent].userAnswer) return ;
+      if (!questions[indexCurrent].userAnswer) return ;
 
       if (indexCurrent < questions.length - 1) {
          this.setState({ indexCurrent: indexCurrent + 1})
          return ;
       }
 
-      this.calculateScore(questions);
-   }
-
-   calculateScore(questions) {
-      if (questions.every(question => question.userAnswer)) {
-         const correctAnswers = questions.filter(those => {
-            return those.correctAnswer === those.userAnswer
-         }).length
-         const score = Math.round(correctAnswers / questions.length * 100)
-         const record = {
-            id: new Date().getTime(),
-            score: score
-         }
-         console.log('record created: ' + JSON.parse(record))
-         localStorage.setItem('record', JSON.stringify(record))
-         console.log('record set to local storage: ' + record)
-      }
+      localStorage.setItem('questions', JSON.stringify(questions))
    }
 }
 
