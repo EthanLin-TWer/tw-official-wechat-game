@@ -71,7 +71,7 @@ class Result extends Component {
             </div>
             <Background />
             <div className="marketing">
-               <button className="join-us">加入<b>Thought</b>Works, 和众多大牛一起工作</button>
+               <button className="join-us">来<b>Thought</b>Works深造</button>
                <button className="play-again">再玩一次</button>
             </div>
          </div>

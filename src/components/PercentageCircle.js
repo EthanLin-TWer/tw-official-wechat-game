@@ -12,8 +12,8 @@ const PercentageCircle = ({ ranking }) => {
          <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
             <defs>
                <linearGradient id="Gradient2" x1="0" x2="1" y1="0" y2="0">
-                  <stop offset="0%" stopColor="#e87a90" />
-                  <stop offset="100%" stopColor="#cb1b45" stopOpacity="1" />
+                  <stop offset="0%" stopColor="#227d51" />
+                  <stop offset="100%" stopColor="#36563c" stopOpacity="1" />
                </linearGradient>
             </defs>
             <circle cx={radius} cy={radius} r="70" strokeWidth="19" stroke="rgb(238,238,240)" fill="none"></circle>
