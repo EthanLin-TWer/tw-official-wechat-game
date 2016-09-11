@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 class Navigation extends Component {
 
@@ -7,7 +8,7 @@ class Navigation extends Component {
       return (
          <ul className="pager">
             { Navigation.showPrevious(index) ? this.renderPreviousButton(index) : null }
-            { Navigation.showSubmit(index, total) ? this.renderNextButton('提交') : this.renderNextButton('下一题') }
+            { Navigation.showSubmit(index, total) ? this.renderSubmitButton() : this.renderNextButton() }
          </ul>
       )
    }
@@ -21,13 +22,22 @@ class Navigation extends Component {
       )
    }
 
-   renderNextButton(text) {
+   renderNextButton() {
       const { onNext } = this.props
       return (
          <li className="next">
             <a
-               onClick={() => onNext()}>{text}
+               onClick={() => onNext()}>下一题
             </a>
+         </li>
+      )
+   }
+
+   renderSubmitButton() {
+      const { onNext } = this.props
+      return (
+         <li className="next">
+            <Link to="/result" onClick={() => onNext()}>提交</Link>
          </li>
       )
    }

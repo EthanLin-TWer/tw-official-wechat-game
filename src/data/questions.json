@@ -132,18 +132,6 @@
     "userAnswer": ""
   },
   {
-    "id": 12,
-    "question": "众里寻他千百度，蓦然回首，那人却在灯火阑珊处。——辛弃疾《青玉案》\n句子里所体现的算法是:",
-    "options": [
-      "贪心", "回溯", "穷举", "分治"
-    ],
-    "images": [
-      "url1", "url2", "optional", "could-be-empty"
-    ],
-    "correctAnswer": "回溯",
-    "userAnswer": ""
-  },
-  {
     "id": 13,
     "question": "只劝楼台追后主，不愁弓矢下残唐。——孔尚任《桃花扇》\n句子中所体现的算法是:",
     "options": [

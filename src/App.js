@@ -29,7 +29,7 @@ class App extends Component {
    }
 
    static shuffleQuestions(questions) {
-      return App.random(questions, 4)
+      return App.random(questions, 2)
    }
 
    static shuffleOptions(options) {
@@ -102,7 +102,13 @@ class App extends Component {
             return those.correctAnswer === those.userAnswer
          }).length
          const score = Math.round(correctAnswers / questions.length * 100)
-         console.log('your score: ' + score)
+         const record = {
+            id: new Date().getTime(),
+            score: score
+         }
+         console.log('record created: ' + JSON.parse(record))
+         localStorage.setItem('record', JSON.stringify(record))
+         console.log('record set to local storage: ' + record)
       }
    }
 }
