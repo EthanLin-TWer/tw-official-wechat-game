@@ -239,6 +239,18 @@
     ],
     "correctAnswer": "10",
     "userAnswer": ""
+  },
+  {
+    "id": 21,
+    "question": "有这样一份菜单:宫保鸡丁1\n/*番茄鸡蛋1\n牛肉面1\n正确的解读方法是:",
+    "options": [
+      "三份菜", "两份菜", "一份菜", "没有菜"
+    ],
+    "images": [
+      "url1", "url2", "optional", "could-be-empty"
+    ],
+    "correctAnswer": "一份菜",
+    "userAnswer": ""
   }
 
 ]
