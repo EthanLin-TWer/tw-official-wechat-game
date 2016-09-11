@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Header, Background, PercentageCircle } from '../components'
-import http from 'http'
+import http from 'http';
+
+import './Result.css'
 
 class Result extends Component {
 
@@ -65,9 +67,13 @@ class Result extends Component {
                <p>
                   击败了全国 { (ranking * 100).toFixed(2) + '%' } 的小伙伴!
                </p>
-               <PercentageCircle ranking={ranking} />
+               <PercentageCircle ranking={ranking}/>
             </div>
             <Background />
+            <div className="marketing">
+               <button className="join-us">加入<b>Thought</b>Works, 和众多大牛一起工作</button>
+               <button className="play-again">再玩一次</button>
+            </div>
          </div>
       )
    }

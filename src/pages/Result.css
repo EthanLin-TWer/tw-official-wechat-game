@@ -1,0 +1,20 @@
+.score-panel {
+    text-align: center;
+    font-size: 20px;
+    font-family: "Kaiti SC"
+}
+
+.ranking-panel {
+    text-align: center;
+    font-size: 16px;
+    font-family: "Kaiti SC";
+}
+
+.marketing .join-us, .marketing .play-again {
+    display: block;
+    margin: 10px auto;
+    background: #2bb8cf;
+    color: #fff;
+    border-radius: 2px;
+    padding: 13px 25px;
+}
