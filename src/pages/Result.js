@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Header, Background } from '../components'
+import { Header, Background, PercentageCircle } from '../components'
 import http from 'http'
 
 class Result extends Component {
@@ -26,6 +26,7 @@ class Result extends Component {
                   this.setState({
                      record: { ...record, ranking: content }
                   })
+
                })
             })
          })
@@ -44,20 +45,28 @@ class Result extends Component {
          return those.correctAnswer === those.userAnswer
       }).length
       const score = Math.round(correctAnswers / questions.length * 100)
+      const id = new Date().getTime()
 
-      return {
-         id: new Date().getTime(),
-         score: score
-      }
+      return { id, score }
    }
 
    render() {
+      const { score, ranking } = this.state.record
+      console.log(ranking)
       return (
          <div className="result">
             <Header />
-            {this.state.record.id},
-            {this.state.record.score},
-            {this.state.record.ranking}
+            <div className="score-panel">
+               <p>
+                  你本次答题得分为: <b>{ score }</b>,
+               </p>
+            </div>
+            <div className="ranking-panel">
+               <p>
+                  击败了全国 { (ranking * 100).toFixed(2) + '%' } 的小伙伴!
+               </p>
+               <PercentageCircle ranking={ranking} />
+            </div>
             <Background />
          </div>
       )

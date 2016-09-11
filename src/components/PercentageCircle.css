@@ -1,0 +1,9 @@
+.circle-wraper {
+    width:204px;
+    height:204px;
+    margin:0 auto;
+}
+circle {
+    -webkit-transition: stroke-dasharray .25s;
+    transition: stroke-dasharray .25s;
+}
