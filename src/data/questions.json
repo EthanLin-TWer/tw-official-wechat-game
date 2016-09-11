@@ -1,302 +1,244 @@
-[
-  {
-    "id": 1,
-    "question": "question-11111111",
-    "options": [
-      "question-aaaaa-1",
-      "question-bbbbb-1",
-      "question-ccccc-1",
-      "question-ddddd-1"
-    ],
-    "images": [
-      "./src/images/img11111111.jpg"
-    ],
-    "correctAnswer": "question-bbbbb-1",
-    "userAnswer": ""
-  },
+[{
+  "id": 1,
+  "question": "以下谁是二进制思想的最早提出者？",
+  "options": [
+    "伏羲", "姬昌", "莱布尼茨", "柏拉图"
+  ],
+  "images": [
+    "url1", "url2", "optional", "could-be-empty"
+  ],
+  "correctAnswer": "莱布尼茨",
+  "userAnswer": ""
+},
   {
     "id": 2,
-    "question": "question-22222222",
+    "question": "以下哪个概念和公孙龙的《指物论》中的“指”字含义相近？",
     "options": [
-      "question-aaaaa-2",
-      "question-bbbbb-2",
-      "question-ccccc-2",
-      "question-ddddd-2"
+      "变量", "数组", "对象", "指针"
     ],
     "images": [
-      "./src/images/img22222222.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-ccccc-2",
+    "correctAnswer": "指针",
     "userAnswer": ""
   },
   {
     "id": 3,
-    "question": "question-33333333",
+    "question": "蔺相如，司马相如；魏无忌，长孙无忌。下列哪一组对应关系与此类似？",
     "options": [
-      "question-aaaaa-3",
-      "question-bbbbb-3",
-      "question-ccccc-3",
-      "question-ddddd-3"
+      "PHP，Python", "JSP，servlet", "java，java script", "C，C++"
     ],
     "images": [
-      "./src/images/img33333333.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-ddddd-3",
+    "correctAnswer": "java，java script",
     "userAnswer": ""
   },
   {
     "id": 4,
-    "question": "question-44444444",
+    "question": "秦始皇吞并六国采用了以下哪种算法思想？",
     "options": [
-      "question-aaaaa-4",
-      "question-bbbbb-4",
-      "question-ccccc-4",
-      "question-ddddd-4"
+      "递归", "分治", "迭代", "模拟"
     ],
     "images": [
-      "./src/images/img44444444.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-aaaaa-4",
+    "correctAnswer": "分治",
     "userAnswer": ""
   },
   {
     "id": 5,
-    "question": "question-55555555",
+    "question": "雅典王子忒修斯勇闯克里特岛斩杀米诺牛的时候采用了以下哪种算法？",
     "options": [
-      "question-aaaaa-5",
-      "question-bbbbb-5",
-      "question-ccccc-5",
-      "question-ddddd-5"
+      "动态规划", "穷举", "记忆化搜索", "Dijkstra算法"
     ],
     "images": [
-      "./src/images/img55555555.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-bbbbb-5",
+    "correctAnswer": "记忆化搜索",
     "userAnswer": ""
   },
   {
     "id": 6,
-    "question": "question-66666666",
+    "question": "印度电影《宝莱坞机器人之恋》中的机器人七弟采用的智能算法最有可能是以下哪一种？",
     "options": [
-      "question-aaaaa-6",
-      "question-bbbbb-6",
-      "question-ccccc-6",
-      "question-ddddd-6"
+      "神经网络", "遗传算法", "模拟退火", "穷举算法"
     ],
     "images": [
-      "./src/images/img66666666.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-ccccc-6",
+    "correctAnswer": "神经网络",
     "userAnswer": ""
   },
   {
     "id": 7,
-    "question": "question-77777777",
+    "question": "《公孙龙子》记载：“齐王之谓尹文曰：‘寡人甚好士，以齐国无士，何也？’尹文曰：‘愿闻大王之所谓士者。’齐王无以应。”这说明了齐王：",
     "options": [
-      "question-aaaaa-7",
-      "question-bbbbb-7",
-      "question-ccccc-7",
-      "question-ddddd-7"
+      "昏庸无道", "是个结巴", "不会下定义", "不会定义自己的需求"
     ],
     "images": [
-      "./src/images/img77777777.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-ddddd-7",
+    "correctAnswer": "不会定义自己的需求",
     "userAnswer": ""
   },
   {
     "id": 8,
-    "question": "question-88888888",
+    "question": "惠施曾提出过“卵有毛”的命题，以下哪一项是导致这个错误命题的原因：",
     "options": [
-      "question-aaaaa-8",
-      "question-bbbbb-8",
-      "question-ccccc-8",
-      "question-ddddd-8"
+      "混淆了命名空间", "引入了错误的包", "衍生类未重载", "调用了危险的指针"
     ],
     "images": [
-      "./src/images/img88888888.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-aaaaa-8",
+    "correctAnswer": "引入了错误的包",
     "userAnswer": ""
   },
   {
     "id": 9,
-    "question": "question-99999999",
+    "question": "下面哪种面向对象的方法可以让你最快变得富有？",
     "options": [
-      "question-aaaaa-9",
-      "question-bbbbb-9",
-      "question-ccccc-9",
-      "question-ddddd-9"
+      "继承", "封装", "多态", "抽象"
     ],
     "images": [
-      "./src/images/img99999999.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-bbbbb-9",
+    "correctAnswer": "继承",
     "userAnswer": ""
   },
+
   {
     "id": 10,
-    "question": "question-1010101010101010",
+    "question": "明朝时期张居正改革的总括一县之赋役，悉并为一条的一条鞭法的主要思想是？",
     "options": [
-      "question-aaaaa-10",
-      "question-bbbbb-10",
-      "question-ccccc-10",
-      "question-ddddd-10"
+      "面向过程", "万物皆数", "统一接口", "泛型编程"
     ],
     "images": [
-      "./src/images/img1010101010101010.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-ccccc-10",
+    "correctAnswer": "统一接口",
     "userAnswer": ""
   },
   {
     "id": 11,
-    "question": "question-1111111111111111",
+    "question": "众里寻他千百度，蓦然回首，那人却在灯火阑珊处。——辛弃疾《青玉案》句子里所体现的算法是:",
     "options": [
-      "question-aaaaa-11",
-      "question-bbbbb-11",
-      "question-ccccc-11",
-      "question-ddddd-11"
+      "贪心", "回溯", "穷举", "分治"
     ],
     "images": [
-      "./src/images/img1111111111111111.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-ddddd-11",
+    "correctAnswer": "回溯",
     "userAnswer": ""
   },
   {
     "id": 12,
-    "question": "question-1212121212121212",
+    "question": "众里寻他千百度，蓦然回首，那人却在灯火阑珊处。——辛弃疾《青玉案》\n句子里所体现的算法是:",
     "options": [
-      "question-aaaaa-12",
-      "question-bbbbb-12",
-      "question-ccccc-12",
-      "question-ddddd-12"
+      "贪心", "回溯", "穷举", "分治"
     ],
     "images": [
-      "./src/images/img1212121212121212.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-aaaaa-12",
+    "correctAnswer": "回溯",
     "userAnswer": ""
   },
   {
     "id": 13,
-    "question": "question-1313131313131313",
+    "question": "只劝楼台追后主，不愁弓矢下残唐。——孔尚任《桃花扇》\n句子中所体现的算法是:",
     "options": [
-      "question-aaaaa-13",
-      "question-bbbbb-13",
-      "question-ccccc-13",
-      "question-ddddd-13"
+      "贪心", "递归", "穷举", "分治"
     ],
     "images": [
-      "./src/images/img1313131313131313.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-bbbbb-13",
+    "correctAnswer": "贪心",
     "userAnswer": ""
   },
   {
     "id": 14,
-    "question": "question-1414141414141414",
+    "question": "江南可采莲，莲叶何田田，鱼戏莲叶间。鱼戏莲叶东，鱼戏莲叶西，鱼戏莲叶南，鱼戏莲叶北。——汉乐府《江南》\n句子中所体现的算法是:",
     "options": [
-      "question-aaaaa-14",
-      "question-bbbbb-14",
-      "question-ccccc-14",
-      "question-ddddd-14"
+      "排序", "递归", "穷举", "分治"
     ],
     "images": [
-      "./src/images/img1414141414141414.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-ccccc-14",
+    "correctAnswer": "穷举",
     "userAnswer": ""
   },
   {
     "id": 15,
-    "question": "question-1515151515151515",
+    "question": "现在有一台很蠢的机器想要学会怎么区分橙子和苹果，你会怎么教它?",
     "options": [
-      "question-aaaaa-15",
-      "question-bbbbb-15",
-      "question-ccccc-15",
-      "question-ddddd-15"
+      "形状", "颜色", "重量", "打人疼痛程度"
     ],
     "images": [
-      "./src/images/img1515151515151515.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-ddddd-15",
+    "correctAnswer": "颜色",
     "userAnswer": ""
   },
   {
     "id": 16,
-    "question": "question-1616161616161616",
+    "question": "以下哪个命题是不正确的",
     "options": [
-      "question-aaaaa-16",
-      "question-bbbbb-16",
-      "question-ccccc-16",
-      "question-ddddd-16"
+      "Unix是用户友好的，只是要成为Unix的用户很困难", "要理解递归，你先要理解递归", "电脑是高速的笨蛋，程序员是低速的笨蛋", "Keyboard not found ... press F1 to continue"
     ],
     "images": [
-      "./src/images/img1616161616161616.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-aaaaa-16",
+    "correctAnswer": "Keyboard not found ... press F1 to continue",
     "userAnswer": ""
   },
   {
     "id": 17,
-    "question": "question-1717171717171717",
+    "question": "程序员最讨厌康熙的哪个儿子？",
     "options": [
-      "question-aaaaa-17",
-      "question-bbbbb-17",
-      "question-ccccc-17",
-      "question-ddddd-17"
+      "胤禔", "胤祉", "胤禛", "胤禩"
     ],
     "images": [
-      "./src/images/img1717171717171717.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-bbbbb-17",
+    "correctAnswer": "胤禩",
     "userAnswer": ""
   },
   {
     "id": 18,
-    "question": "question-1818181818181818",
+    "question": "有3杯水，第几个杯水是溢出的？",
     "options": [
-      "question-aaaaa-18",
-      "question-bbbbb-18",
-      "question-ccccc-18",
-      "question-ddddd-18"
+      "0", "1", "2", "3"
     ],
     "images": [
-      "./src/images/img1818181818181818.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-ccccc-18",
+    "correctAnswer": "3",
     "userAnswer": ""
+
   },
   {
     "id": 19,
-    "question": "question-1919191919191919",
+    "question": "作为程序员最可能喜欢下面四种哪一种图案",
     "options": [
-      "question-aaaaa-19",
-      "question-bbbbb-19",
-      "question-ccccc-19",
-      "question-ddddd-19"
+      "恐龙", "瓢虫", "红色条纹", "绿色条纹"
     ],
     "images": [
-      "./src/images/img1919191919191919.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-ddddd-19",
+    "correctAnswer": "3",
     "userAnswer": ""
   },
   {
     "id": 20,
-    "question": "question-2020202020202020",
+    "question": "JavaScript中,console.log(++[[]][+[]]+[+[]])输出结果是",
     "options": [
-      "question-aaaaa-20",
-      "question-bbbbb-20",
-      "question-ccccc-20",
-      "question-ddddd-20"
+      "10", "undefined", "0", "1"
     ],
     "images": [
-      "./src/images/img2020202020202020.jpg"
+      "url1", "url2", "optional", "could-be-empty"
     ],
-    "correctAnswer": "question-aaaaa-20",
+    "correctAnswer": "10",
     "userAnswer": ""
   }
+
 ]
