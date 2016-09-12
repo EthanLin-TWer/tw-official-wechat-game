@@ -1,20 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
+!index.html
+!favicon.ico
 
-# dependencies
 node_modules
-
-# testing
-coverage
-
-# production
 build
-
-# Intellij
 .idea
-*.ipr
-*.iws
-*.iml
-
-# misc
-.DS_Store
-npm-debug.log
