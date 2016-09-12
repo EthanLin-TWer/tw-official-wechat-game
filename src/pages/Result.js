@@ -69,10 +69,15 @@ class Result extends Component {
                </p>
                <PercentageCircle ranking={ranking}/>
             </div>
-            <Background />
             <div className="marketing">
-               <button className="join-us">来<b>Thought</b>Works深造</button>
-               <button className="play-again">再玩一次</button>
+               <ul className="marketing-option">
+                  <li className="join-us">
+                     <a>加入我们</a>
+                  </li>
+                  <li className="play-again">
+                     <a>再玩一次</a>
+                  </li>
+               </ul>
             </div>
          </div>
       )

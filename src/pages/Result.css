@@ -10,11 +10,27 @@
     font-family: "Kaiti SC";
 }
 
-.marketing .join-us, .marketing .play-again {
+ul.marketing-option {
+    padding: 0;
+}
+
+.join-us, .play-again {
     display: block;
-    margin: 10px auto;
-    background: #2bb8cf;
-    color: #fff;
-    border-radius: 2px;
-    padding: 13px 25px;
+    font-family: "Kaiti SC";
+    font-size: 18px;
+    line-height: 1;
+}
+
+.join-us a, .play-again a {
+    text-align: center;
+    display: block;
+    margin: 20px 100px; /* TODO: Responsiveness */
+    padding: 17px 30px;
+    color: #ffffff;
+    background-color: #5B5959 !important;
+    border-radius: 40px;
+}
+
+.join-us a:hover, .play-again a:hover {
+
 }
