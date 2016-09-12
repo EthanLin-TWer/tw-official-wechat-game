@@ -29,7 +29,7 @@ class App extends Component {
    }
 
    static shuffleQuestions(questions) {
-      return App.random(questions, 1)
+      return App.random(questions, 3)
    }
 
    static shuffleOptions(options) {

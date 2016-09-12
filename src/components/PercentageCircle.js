@@ -2,14 +2,13 @@ import React from 'react'
 
 import './PercentageCircle.css'
 
-const PercentageCircle = ({ score, ranking }) => {
+const PercentageCircle = ({ ranking }) => {
    const perimeter = Math.PI * 2 * 70
    const size = 204
    const radius = size / 2
 
    return (
       <div className="circle-wrapper">
-         <span className="score">{score}</span>
          <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
             <defs>
                <linearGradient id="Gradient2" x1="0" x2="1" y1="0" y2="0">

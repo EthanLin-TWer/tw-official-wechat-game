@@ -61,11 +61,17 @@ class Result extends Component {
             <Header />
             <div className="score-panel">
                <p>
-                  你本次答题得分为: <b>{ score }</b>,
+                  您本次答题得分
                </p>
             </div>
             <div className="ranking-panel">
-               <PercentageCircle score={score} ranking={ranking}/>
+               <span className="score-result">
+                  <span className="score">{score}</span>
+                  分
+               </span>
+               <PercentageCircle ranking={ranking}/>
+            </div>
+            <div className="ranking-text">
                <p>
                   击败了全国 { (ranking * 100).toFixed(2) + '%' } 的小伙伴!
                </p>

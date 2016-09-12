@@ -6,19 +6,39 @@
 }
 
 .ranking-panel {
+    position: absolute;
+    width: 375px;
+    left: 50%;
+    margin-left: -187px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    font-size: 16px;
     font-family: "Kaiti SC";
     font-weight: bold;
+}
+
+.score-result {
+    position: fixed;
+    font-size: 14px;
+}
+.score {
+    font-size: 50px;
+}
+
+.ranking-text {
+    margin-top: 220px;
+    font-size: 16px;
+    font-family: "Kaiti SC", serif;
+    font-weight: bold;
+    text-align: center;
 }
 
 .marketing {
     margin-top: 30px;
 }
+
 ul.marketing-option {
     padding: 0;
 }
@@ -38,8 +58,4 @@ ul.marketing-option {
     color: #ffffff;
     background-color: #5B5959 !important;
     border-radius: 40px;
-}
-
-.join-us a:hover, .play-again a:hover {
-
 }
