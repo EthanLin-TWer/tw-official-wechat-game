@@ -1,7 +1,8 @@
 {
   "name": "tw-official-wechat-game",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "http://linesh-simplicity.github.io/tw-official-wechat-game",
   "devDependencies": {
     "autoprefixer": "6.4.0",
     "babel-core": "6.14.0",
