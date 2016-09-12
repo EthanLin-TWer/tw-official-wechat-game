@@ -1,13 +1,19 @@
 .score-panel {
     text-align: center;
     font-size: 20px;
-    font-family: "Kaiti SC"
+    font-family: "Kaiti SC";
+    font-weight: bold;
 }
 
 .ranking-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     font-size: 16px;
     font-family: "Kaiti SC";
+    font-weight: bold;
 }
 
 .marketing {
