@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 import { Header, Background, PercentageCircle } from '../components'
 import http from 'http';
 
@@ -75,7 +76,7 @@ class Result extends Component {
                      <a>加入我们</a>
                   </li>
                   <li className="play-again">
-                     <a>再玩一次</a>
+                     <Link to="/">再玩一次</Link>
                   </li>
                </ul>
             </div>
