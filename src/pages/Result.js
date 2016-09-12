@@ -65,10 +65,10 @@ class Result extends Component {
                </p>
             </div>
             <div className="ranking-panel">
+               <PercentageCircle ranking={ranking}/>
                <p>
                   击败了全国 { (ranking * 100).toFixed(2) + '%' } 的小伙伴!
                </p>
-               <PercentageCircle ranking={ranking}/>
             </div>
             <div className="marketing">
                <ul className="marketing-option">
