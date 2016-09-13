@@ -11,7 +11,6 @@ class App extends Component {
       super(props)
       this.onNext = this.onNext.bind(this)
       this.renderPrevious = this.renderPrevious.bind(this)
-      this.renderNext = this.renderNext.bind(this)
       this.state = {
          questions: App.loadQuestions(),
          indexCurrent: 0
@@ -73,15 +72,6 @@ class App extends Component {
       if (current <= 0) return;
 
       this.setState({ indexCurrent: current - 1 })
-   }
-
-   renderNext(userAnswer) {
-      const { questions, indexCurrent } = this.state
-      questions[indexCurrent].userAnswer = userAnswer
-
-      if (indexCurrent < questions.length - 1) {
-         this.setState({ indexCurrent: indexCurrent + 1 })
-      }
    }
 
    onNext() {

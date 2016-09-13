@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import { Header, Background, PercentageCircle } from '../components'
+import { Header, Background, Footer, PercentageCircle } from '../components'
 import http from 'http';
 
 import './Result.css'
@@ -79,13 +79,14 @@ class Result extends Component {
             <div className="marketing">
                <ul className="marketing-option">
                   <li className="join-us">
-                     <a>加入我们</a>
+                     <a href="http://join.thoughtworks.cn/">加入我们</a>
                   </li>
                   <li className="play-again">
                      <Link to="/">再玩一次</Link>
                   </li>
                </ul>
             </div>
+            <Footer />
          </div>
       )
    }
